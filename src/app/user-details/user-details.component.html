@@ -1,0 +1,16 @@
+<app-header (searchEvent)="onSearch($event)"></app-header>
+<mat-progress-spinner *ngIf="(loadingService.isLoading() | async)" mode="indeterminate"></mat-progress-spinner>
+
+
+<div class="user-details-container">
+  <h2>User Details</h2>
+  <div>
+    <p><strong>User ID:</strong> {{ userId }}</p>
+    <p><strong>First Name:</strong> {{ user?.first_name }}</p>
+    <p><strong>Last Name:</strong> {{ user?.last_name }}</p>
+
+  
+    <button mat-raised-button color="primary" (click)="navigateBack()"> Back To User List</button>
+
+  </div>
+

@@ -1,0 +1,17 @@
+<app-header (searchEvent)="onSearch($event)"></app-header>
+
+<mat-progress-spinner *ngIf="(loadingService.isLoading() | async)" mode="indeterminate"></mat-progress-spinner>
+
+
+
+<div class="user-list-container">
+  <mat-card *ngFor="let user of filteredUsers" class="user-card" (click)="getUserDetails(user.id)">
+    <mat-card-header>
+      <div mat-card-avatar class="user-avatar">
+        <img [src]="user.avatar" alt="User Avatar">
+      </div>
+      <mat-card-title>{{ user.first_name }} {{ user.last_name }}</mat-card-title>
+      <mat-card-subtitle>ID: {{ user.id }}</mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+</div>
