@@ -15,6 +15,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { UserListComponent } from './user-list/user-list.component';
 import { LoadingService } from './loading.service';
 import { FooterComponent } from './footer/footer.component';
+import { HoverHighlightDirective } from './hover-highlight.directive';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FooterComponent } from './footer/footer.component';
     UserListComponent,
     UserDetailsComponent,
     FooterComponent,
+    HoverHighlightDirective,
   ],
   imports: [
     BrowserModule,
